@@ -13,6 +13,7 @@ export const translations = {
     time: "Time",
     date: "Date",
     chennaiZone: "Chennai Coastal Belt",
+    deployLink: "Deployment Strategy",
 
     // Splash
     welcome: "Welcome to CodeStrix AI",
@@ -87,6 +88,7 @@ export const translations = {
     time: "நேரம்",
     date: "தேதி",
     chennaiZone: "சென்னை கடலோரப் பகுதி",
+    deployLink: "வரிசைப்படுத்தல் உத்தி",
 
     welcome: "CodeStrix AI-க்கு வரவேற்கிறோம்",
     heroTitle: "கடல் ஆக்ஸிஜன் சரிவைக் கணித்தல்",
@@ -157,6 +159,7 @@ export const translations = {
     time: "समय",
     date: "तिथि",
     chennaiZone: "चेन्नई तटीय क्षेत्र",
+    deployLink: "परिनियोजन रणनीति",
 
     welcome: "CodeStrix AI में आपका स्वागत है",
     heroTitle: "समुद्री ऑक्सीजन की कमी का पूर्वानुमान",

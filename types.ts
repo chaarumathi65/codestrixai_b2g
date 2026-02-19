@@ -45,4 +45,4 @@ export interface PredictionResult {
   analysis?: string;
 }
 
-export type AppView = 'splash' | 'login' | 'otp' | 'detecting' | 'result' | 'admin' | 'architecture';
+export type AppView = 'splash' | 'login' | 'otp' | 'detecting' | 'result' | 'admin' | 'architecture' | 'deployment';

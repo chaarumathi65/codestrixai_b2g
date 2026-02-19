@@ -17,6 +17,7 @@ import RiskMap from './components/RiskMap';
 import ExplainableAI from './components/ExplainableAI';
 import HistoricalArchive from './components/HistoricalArchive';
 import RiskTrendGraph from './components/RiskTrendGraph';
+import Deployment from './components/Deployment';
 
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language | null>(null);
@@ -129,9 +130,9 @@ const App: React.FC = () => {
     <div className="min-h-screen flex flex-col">
       {/* Navbar */}
       <header className="p-6 flex justify-between items-center max-w-6xl mx-auto w-full">
-        <h1 className="text-2xl font-bold text-cyan-400">
+        <button onClick={() => setView('splash')} className="text-2xl font-bold text-cyan-400 hover:opacity-80 transition-opacity">
           🌊 {t.appTitle}
-        </h1>
+        </button>
         <div className="flex items-center gap-6">
           <div className="text-sm text-gray-400 hidden sm:block">
             {t.tagline}
@@ -365,10 +366,19 @@ const App: React.FC = () => {
         )}
 
         {view === 'admin' && <Architecture />}
+        {view === 'deployment' && <Deployment />}
       </main>
 
-      <footer className="p-10 text-center text-gray-500 text-sm border-t border-white/5">
-        {t.poweredBy}
+      <footer className="p-10 text-center border-t border-white/5">
+        <div className="flex flex-col items-center gap-4">
+          <p className="text-gray-500 text-sm">{t.poweredBy}</p>
+          <button 
+            onClick={() => setView('deployment')}
+            className="text-[10px] text-cyan-500 font-black uppercase tracking-widest hover:text-cyan-400 transition-colors"
+          >
+            {t.deployLink}
+          </button>
+        </div>
       </footer>
     </div>
   );
