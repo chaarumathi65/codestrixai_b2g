@@ -1,0 +1,5 @@
+{
+  "name": "CodeStrix AI – Predictive Marine Hypoxia Early Warning System",
+  "description": "A satellite-driven early warning system for small-scale fishers, featuring real-time hypoxia prediction via automated SST and Chlorophyll ingestion.",
+  "requestFramePermissions": []
+}

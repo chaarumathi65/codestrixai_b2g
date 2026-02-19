@@ -1,0 +1,227 @@
+
+import { Language, RiskLevel } from '../types';
+
+export const translations = {
+  en: {
+    // General / Navbar
+    appTitle: "CodeStrix AI",
+    tagline: "Marine Hypoxia Early Warning System",
+    poweredBy: "Powered by Satellite Data (NOAA/MODIS) | AI-Based Marine Risk Engine v2.5",
+    returnBtn: "Return to Base",
+    operator: "Operator",
+    zone: "Zone",
+    time: "Time",
+    date: "Date",
+    chennaiZone: "Chennai Coastal Belt",
+
+    // Splash
+    welcome: "Welcome to CodeStrix AI",
+    heroTitle: "Predicting Ocean Oxygen Collapse",
+    heroDesc: "AI-powered hypoxia forecasting platform for coastal fishers and marine authorities. Securing marine ecosystems through predictive intelligence.",
+    scanBtn: "Scan My Coast",
+    detecting: "Detecting Coastal Zone...",
+    fetching: "Fetching Satellite Data (NOAA/MODIS)...",
+    analyzing: "Running Hypoxia AI Model...",
+
+    // Auth
+    loginTitle: "User Registration",
+    nameLabel: "Your Name",
+    phoneLabel: "Phone Number",
+    sendOtp: "Send OTP",
+    otpTitle: "Verify Number",
+    otpSent: "Sent to",
+    otpLabel: "Enter 6-digit OTP",
+    verifyBtn: "Verify & Continue",
+    bypassCode: "Bypass Code: 123456",
+
+    // Risk Result
+    riskTitle: "Current Hypoxia Risk",
+    safeMsg: "Conditions are safe. Good for fishing.",
+    warningMsg: "Caution: Oxygen levels dropping. Monitor closely.",
+    severeMsg: "DANGER: Severe hypoxia risk. Do not deploy nets. Move livestock.",
+    aiReasoning: "AI Scientific Reasoning",
+    currentSst: "Current SST",
+    chlLevel: "Chl-A Level",
+    sst7d: "7d SST Avg",
+    chl7d: "7d Chl Avg",
+
+    // Components
+    mapTitle: "Coastal Risk Map",
+    mapReset: "RESET",
+    mapLive: "Live Satellite Data",
+    mapLegendSafe: "Safe",
+    mapLegendWarn: "Warn",
+    mapLegendSevere: "Severe",
+
+    xaiTitle: "Explainable AI (XAI) Panel",
+    xaiSst: "SST Threshold Check",
+    xaiChl: "Chlorophyll Concentration",
+    xaiTrend: "7-Day Warming Trend",
+    xaiCritical: "CRITICAL",
+    xaiElevated: "ELEVATED",
+    xaiNormal: "NORMAL",
+    xaiHigh: "HIGH",
+    xaiMod: "MODERATE",
+    xaiLow: "LOW",
+    xaiWarming: "WARMING",
+    xaiCooling: "COOLING",
+    xaiWeights: "* Feature weights calculated via RandomForest (Gini Importance Index: 0.94)",
+
+    trendTitle: "Risk Trend",
+    trendInference: "Model Inference",
+    trendForecast: "Forecasting Active",
+
+    archiveTitle: "Historical Event Archive",
+    archivePeriod: "Event Period (From - To)",
+    archiveDur: "Dur.",
+    archiveImpact: "Econ. Impact",
+    archiveSync: "Data synchronized with local fisheries department"
+  },
+  ta: {
+    appTitle: "CodeStrix AI",
+    tagline: "கடல் ஆக்ஸிஜன் பற்றாக்குறை முன்கூட்டிய எச்சரிக்கை அமைப்பு",
+    poweredBy: "செயற்கைக்கோள் தரவு (NOAA/MODIS) மூலம் இயக்கப்படுகிறது | AI-அடிப்படையிலான கடல் அபாய இயந்திரம் v2.5",
+    returnBtn: "முகப்பிற்குத் திரும்பு",
+    operator: "ஆபரேட்டர்",
+    zone: "மண்டலம்",
+    time: "நேரம்",
+    date: "தேதி",
+    chennaiZone: "சென்னை கடலோரப் பகுதி",
+
+    welcome: "CodeStrix AI-க்கு வரவேற்கிறோம்",
+    heroTitle: "கடல் ஆக்ஸிஜன் சரிவைக் கணித்தல்",
+    heroDesc: "கடலோர மீனவர்கள் மற்றும் கடல்சார் அதிகாரிகளுக்கான AI-ஆற்றல் கொண்ட முன்கணிப்பு தளம். முன்கணிப்பு நுண்ணறிவு மூலம் கடல் சுற்றுச்சூழல் அமைப்புகளைப் பாதுகாத்தல்.",
+    scanBtn: "எனது கடற்கரையை ஸ்கேன் செய்",
+    detecting: "கடலோர மண்டலத்தைக் கண்டறிதல்...",
+    fetching: "செயற்கைக்கோள் தரவைப் பெறுகிறது (NOAA/MODIS)...",
+    analyzing: "AI மாதிரியை இயக்குகிறது...",
+
+    loginTitle: "பயனர் பதிவு",
+    nameLabel: "உங்கள் பெயர்",
+    phoneLabel: "தொலைபேசி எண்",
+    sendOtp: "OTP அனுப்பு",
+    otpTitle: "எண்ணைச் சரிபார்க்கவும்",
+    otpSent: "அனுப்பப்பட்டது",
+    otpLabel: "6 இலக்க OTP-ஐ உள்ளிடவும்",
+    verifyBtn: "சரிபார்த்து தொடரவும்",
+    bypassCode: "கடவுக்குறியீடு: 123456",
+
+    riskTitle: "தற்போதைய அபாய நிலை",
+    safeMsg: "நிலைமைகள் பாதுகாப்பாக உள்ளன. மீன்பிடிக்க நல்லது.",
+    warningMsg: "எச்சரிக்கை: ஆக்ஸிஜன் அளவு குறைகிறது. கூர்ந்து கவனியுங்கள்.",
+    severeMsg: "ஆபத்து: கடுமையான அபாயம். வலைகளை விரிக்க வேண்டாம். கால்நடைகளை மாற்றவும்.",
+    aiReasoning: "AI அறிவியல் காரணம்",
+    currentSst: "தற்போதைய SST",
+    chlLevel: "Chl-A அளவு",
+    sst7d: "7 நாள் SST சராசரி",
+    chl7d: "7 நாள் Chl சராசரி",
+
+    mapTitle: "கடலோர அபாய வரைபடம்",
+    mapReset: "மீட்டமை",
+    mapLive: "நேரடி செயற்கைக்கோள் தரவு",
+    mapLegendSafe: "பாதுகாப்பானது",
+    mapLegendWarn: "எச்சரிக்கை",
+    mapLegendSevere: "கடுமையானது",
+
+    xaiTitle: "AI விளக்கப் பலகம் (XAI)",
+    xaiSst: "வெப்பநிலை சோதனை",
+    xaiChl: "குளோரோபில் செறிவு",
+    xaiTrend: "7 நாள் வெப்பப் போக்கு",
+    xaiCritical: "மிக மோசம்",
+    xaiElevated: "அதிகரிப்பு",
+    xaiNormal: "சாதாரணமானது",
+    xaiHigh: "அதிகம்",
+    xaiMod: "மிதமான",
+    xaiLow: "குறைவு",
+    xaiWarming: "வெப்பமடைதல்",
+    xaiCooling: "குளிர்ச்சியடைதல்",
+    xaiWeights: "* அம்ச எடைகள் RandomForest மூலம் கணக்கிடப்படுகின்றன",
+
+    trendTitle: "அபாயப் போக்கு",
+    trendInference: "மாதிரி அனுமானம்",
+    trendForecast: "முன்கணிப்பு செயலில் உள்ளது",
+
+    archiveTitle: "வரலாற்று நிகழ்வு காப்பகம்",
+    archivePeriod: "நிகழ்வு காலம் (முதல் - வரை)",
+    archiveDur: "காலம்",
+    archiveImpact: "பொருளாதார பாதிப்பு",
+    archiveSync: "உள்ளூர் மீன்வளத் துறையுடன் தரவு ஒத்திசைக்கப்பட்டது"
+  },
+  hi: {
+    appTitle: "CodeStrix AI",
+    tagline: "समुद्री हाइपोक्सिया पूर्व चेतावनी प्रणाली",
+    poweredBy: "सैटेलाइट डेटा (NOAA/MODIS) द्वारा संचालित | AI-आधारित समुद्री जोखिम इंजन v2.5",
+    returnBtn: "वापस जाएँ",
+    operator: "ऑपरेटर",
+    zone: "क्षेत्र",
+    time: "समय",
+    date: "तिथि",
+    chennaiZone: "चेन्नई तटीय क्षेत्र",
+
+    welcome: "CodeStrix AI में आपका स्वागत है",
+    heroTitle: "समुद्री ऑक्सीजन की कमी का पूर्वानुमान",
+    heroDesc: "तटीय मछुआरों और समुद्री अधिकारियों के लिए AI-संचालित पूर्वानुमान मंच। भविष्य कहनेवाला बुद्धिमत्ता के माध्यम से समुद्री पारिस्थितिकी प्रणालियों को सुरक्षित करना।",
+    scanBtn: "मेरे तट को स्कैन करें",
+    detecting: "तटीय क्षेत्र का पता लगाना...",
+    fetching: "सैटेलाइट डेटा प्राप्त करना (NOAA/MODIS)...",
+    analyzing: "AI मॉडल चल रहा है...",
+
+    loginTitle: "उपयोगकर्ता पंजीकरण",
+    nameLabel: "आपका नाम",
+    phoneLabel: "फ़ोन नंबर",
+    sendOtp: "OTP भेजें",
+    otpTitle: "नंबर सत्यापित करें",
+    otpSent: "भेजा गया",
+    otpLabel: "6 अंकों का OTP दर्ज करें",
+    verifyBtn: "सत्यापित करें और जारी रखें",
+    bypassCode: "बायपास कोड: 123456",
+
+    riskTitle: "वर्तमान जोखिम स्थिति",
+    safeMsg: "स्थितियाँ सुरक्षित हैं। मछली पकड़ने के लिए अच्छा है।",
+    warningMsg: "सावधानी: ऑक्सीजन का स्तर गिर रहा है। बारीकी से निगरानी करें।",
+    severeMsg: "खतरा: गंभीर स्थिति। जाल न डालें। पशुधन को स्थानांतरित करें।",
+    aiReasoning: "AI वैज्ञानिक तर्क",
+    currentSst: "वर्तमान SST",
+    chlLevel: "Chl-A स्तर",
+    sst7d: "7d SST औसत",
+    chl7d: "7d Chl औसत",
+
+    mapTitle: "तटीय जोखिम मानचित्र",
+    mapReset: "रीसेट",
+    mapLive: "लाइव सैटेलाइट डेटा",
+    mapLegendSafe: "सुरक्षित",
+    mapLegendWarn: "चेतावनी",
+    mapLegendSevere: "गंभीर",
+
+    xaiTitle: "व्याख्यात्मक AI (XAI) पैनल",
+    xaiSst: "SST सीमा जाँच",
+    xaiChl: "क्लोरोफिल सांद्रता",
+    xaiTrend: "7-दिवसीय वार्मिंग ट्रेंड",
+    xaiCritical: "गंभीर",
+    xaiElevated: "बढ़ा हुआ",
+    xaiNormal: "सामान्य",
+    xaiHigh: "उच्च",
+    xaiMod: "मध्यम",
+    xaiLow: "निम्न",
+    xaiWarming: "गर्म होना",
+    xaiCooling: "ठंडा होना",
+    xaiWeights: "* फ़ीचर वेट की गणना RandomForest द्वारा की गई",
+
+    trendTitle: "जोखिम प्रवृत्ति",
+    trendInference: "मॉडल अनुमान",
+    trendForecast: "पूर्वानुमान सक्रिय",
+
+    archiveTitle: "ऐतिहासिक घटना संग्रह",
+    archivePeriod: "घटना अवधि (से - तक)",
+    archiveDur: "अवधि",
+    archiveImpact: "आर्थिक प्रभाव",
+    archiveSync: "स्थानीय मत्स्य विभाग के साथ डेटा सिंक किया गया"
+  }
+};
+
+export const getAdvisory = (lang: Language, risk: RiskLevel): string => {
+  const t = translations[lang];
+  if (risk === RiskLevel.SAFE) return t.safeMsg;
+  if (risk === RiskLevel.WARNING) return t.warningMsg;
+  return t.severeMsg;
+};
